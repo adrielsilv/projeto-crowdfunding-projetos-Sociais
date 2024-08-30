@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #00177e;
+    --font-color: #00177e;
     --secondary-color: #e1e0ff;
     --accent-color: #fcfdff;
     --background-color: #ffffff;
@@ -7,6 +7,7 @@
     --highlight-color: #ff5100;
     --error-color: #8ea5ff;
 }
+
 
 body {
     font-family: Arial, sans-serif;
@@ -18,19 +19,21 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    padding: 20px;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    padding: 10px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.5s ease-in-out;
+    transition: 1s;
+    font-weight: bold;
 }
 
 header.scrolled {
-    background-color: var(--primary-color);
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(145, 145, 145, 0.3);
 }
 
 nav ul {
@@ -45,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--accent-color);
+    color: var(--font-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,6 +68,7 @@ nav ul li a {
     transform: translateY(-50px);
     opacity: 0;
     animation: slideUp 1.5s ease-out forwards;
+    z-index: 1;
 }
 
 @keyframes slideUp {
