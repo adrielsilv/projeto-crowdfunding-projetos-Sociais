@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #00177e;
+    --secondary-color: #e1e0ff;
+    --accent-color: #fcfdff;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --highlight-color: #ff5100;
+    --error-color: #8ea5ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease-in-out;
+}
+
+header.scrolled {
+    background-color: var(--primary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#featured-projects, #how-it-works, #testimonials, #call-to-action {
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.project-card, .step, .testimonial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.project-card:hover, .step:hover, .testimonial:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.steps, .testimonials-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px;
+    text-align: center;
+}
