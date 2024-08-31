@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  background-color: var(--accent-color);
+  background-color: #ffffff;
   color: var(--font-color);
   padding: 20px;
   position: fixed;
@@ -29,6 +29,14 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.logo{
+  margin-left: 200px;
+  width: 350px;
+  height:80px;
+  margin: 0;
+  margin-left: 50px;
+}
+
 header.scrolled {
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 26, 255, 0.3);
@@ -36,22 +44,24 @@ header.scrolled {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
+  justify-content: left;
   margin: 0 auto;
   padding: 0 20px;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 0;
   display: flex;
   justify-content: center;
+  align-items: right;
+  gap: 20px;
+  font-size: 1.25rem;
 }
 
 nav ul li {
   margin: 0 20px;
+  text-align: right;
 }
 
 nav ul li a {
