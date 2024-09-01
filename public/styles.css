@@ -18,6 +18,7 @@ body {
 }
 
 header {
+  padding-bottom: 25px;
   background-color: var(--background-color);
   color: var(--light-color);
   padding: 20px;
