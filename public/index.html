@@ -1,104 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ImpactoColetivo - Plataforma de Crowdfunding</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="main.js"></script>
   </head>
   <body>
     <header>
       <div class="header-container">
-        <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-          <img src="/img/logo.png" alt="Logo" class="logo">
+        <a href="#" class="logo-link">
+          <img src="/img/logo.png" alt="Logo ImpactoColetivo" class="logo" />
         </a>
         <nav>
           <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">PROJETOS</a></li>
-            <li><a href="#">SOBRE</a></li>
-            <li><a href="#">CONTATO</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#projetos">PROJETOS</a></li>
+            <li><a href="#estatisticas">ESTATÍSTICAS</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#contato">CONTATO</a></li>
           </ul>
         </nav>
+        <div class="auth-buttons">
+          <button class="sign-in">Cadastro</button>
+          <button class="sign-up">Login</button>
+        </div>
       </div>
     </header>
 
-    <section id="hero">
-      <div class="hero-content">
-        <h2>Faça a Diferença com sua Contribuição</h2>
-        <p>Apoie projetos sociais que transformam vidas.</p>
-        <button id="project-hero">VER PROJETOS</button>
-      </div>
-    </section>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Faça a Diferença com sua Contribuição</h1>
+          <p>Apoie projetos sociais que transformam vidas.</p>
+          <button id="project-hero">VER PROJETOS</button>
+        </div>
+      </section>
 
-    <section id="featured-projects">
-      <h2>Projetos em Destaque</h2>
-      <div class="project-card">
-        <h3>Projeto A</h3>
-        <p>Descrição breve do projeto.</p>
-        <button class="donate">Doar</button>
-      </div>
-      <div class="project-card">
-        <h3>Projeto B</h3>
-        <p>Descrição breve do projeto.</p>
-        <button class="donate">Doar</button>
-      </div>
-    </section>
+      <section id="projetos" class="featured-projects">
+        <h2>Projetos em Destaque</h2>
+        <div class="projects-container" id="projects-container"></div>
+        <button id="load-more-projects">CARREGAR MAIS PROJETOS</button>
+      </section>
 
-    <section id="how-it-works">
-      <h2>Como Funciona</h2>
-      <div class="steps">
-        <div class="step">
-          <h3>1. Escolha um Projeto</h3>
-          <p>Descubra projetos que inspiram você.</p>
+      <section id="estatisticas" class="statistics">
+        <h2>Nossos Impactos</h2>
+        <div class="stats-container">
+          <div class="stat">
+            <h3 id="total-doacoes">0</h3>
+            <p>Doações Recebidas</p>
+          </div>
+          <div class="stat">
+            <h3 id="total-projetos">0</h3>
+            <p>Projetos Ativos</p>
+          </div>
+          <div class="stat">
+            <h3 id="total-beneficiados">0</h3>
+            <p>Beneficiados</p>
+          </div>
         </div>
-        <div class="step">
-          <h3>2. Faça uma Doação</h></p>
-          <p>Contribua com a quantia que desejar.</p>
-        </div>
-        <div class="step">
-          <h3>3. Acompanhe o Progresso</h3>
-          <p>Veja como sua contribuição está fazendo a diferença.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="testimonials">
-      <h2>O que as Pessoas Dizem</h2>
-      <div class="testimonials-container">
-        <div class="testimonial">
-          <p>
-            "ImpactoColetivo me permitiu apoiar causas que realmente importam
-            para mim. É uma plataforma incrível!"
-          </p>
-          <h4>- Ana, Doadora</h4>
+      <section id="como-funciona" class="how-it-works">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>1. Escolha um Projeto</h3>
+            <p>Descubra projetos que inspiram você.</p>
+          </div>
+          <div class="step">
+            <h3>2. Faça uma Doação</h3>
+            <p>Contribua com a quantia que desejar.</p>
+          </div>
+          <div class="step">
+            <h3>3. Acompanhe o Progresso</h3>
+            <p>Veja como sua contribuição está fazendo a diferença.</p>
+          </div>
         </div>
-        <div class="testimonial">
-          <p>
-            "Graças à ImpactoColetivo, conseguimos alcançar nossa meta e
-            transformar nossa comunidade."
-          </p>
-          <h4>- Projeto Esperança</h4>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="call-to-action">
-      <h2>Junte-se a Nós!</h2>
-      <p>Apoie um projeto hoje e faça parte de algo maior.</p>
-      <button id="register">Cadastre-se Agora</button>
-    </section>
+      <section id="testemunhos" class="testimonials">
+        <h2>O que as Pessoas Dizem</h2>
+        <div class="testimonials-container" id="testimonials-container"></div>
+      </section>
+
+      <section id="faq" class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-container" id="faq-container"></div>
+      </section>
+
+      <section id="call-to-action" class="call-to-action">
+        <h2>Junte-se a Nós!</h2>
+        <p>Apoie um projeto hoje e faça parte de algo maior.</p>
+        <button id="register">CADASTRE-SE AGORA</button>
+      </section>
+
+      <section id="blog" class="blog">
+        <h2>Últimas do Blog</h2>
+        <div class="blog-container" id="blog-container">
+          <p>Em breve...</p>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2024 ImpactoColetivo. Todos os direitos reservados.</p>
       <div class="social-links">
-        <a href="#"><img src="/img/facebook-icon.png" alt="Facebook"></a>
-        <a href="#"><img src="/img/instagram-icon.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"
+          ><img src="/img/facebook-icon.png" alt="Facebook"
+        /></a>
+        <a href="#" aria-label="Instagram"
+          ><img src="/img/instagram-icon.png" alt="Instagram"
+        /></a>
       </div>
     </footer>
   </body>
